@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://cdnjs.buttflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+</head>
+<body>
+	<div class="container">
+		<br>
+		<div class="row">
+			<div class="col-md-3">
+				<input type="text" class="form-control" id="address" placeholder="Address">
+			</div>
+			<div class="col-md-3">
+				<input type="text" class="form-control" id="latitude" placeholder="Latitude">
+			</div>
+			<div class="col-md-3">
+				<input type="text" class="form-control" id="longitude" placeholder="Longitude">
+			</div>
+			<div class="col-md-3">
+				<input type="number" class="form-control" id="radius" placeholder="Radius">
+			</div>
+		</div>
+		<br>
+		<div id="locationPicker" style="width: auto; height: 300px;"></div>
+	</div>
+</body>
+</html>
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="http://cdnjs.buttflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+<script src="http://k4r573n.github.io/leaflet-control-osm-geocoder/Control.OSMGeocoder.js"></script>
+<script src="js/OSMLocationPicker.js"></script>
+<script>
+	$(document).ready(function(){
+		initmappicker(1.2957827966373185, 103.84964909458154, 300, {
+			addressId: "address",
+			latitudeId: "latitude",
+			longitudeId: "longitude",
+			radiusId: "radius"
+		});
+	});
+</script>
